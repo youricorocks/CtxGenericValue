@@ -10,10 +10,6 @@ var (
 	errCtx = serrors.String("value missing in the context")
 )
 
-type GenVal struct {
-	key any
-}
-
 func WithContext(ctx context.Context, key any, value any) context.Context {
 	return context.WithValue(ctx, key, value)
 }
